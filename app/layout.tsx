@@ -7,10 +7,9 @@ import "./globals.css"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Aiden C T - Full-Stack Developer",
+  title: "Aiden C T",
   description:
     "Portfolio of Aiden C T - Full-Stack JavaScript Developer specializing in React, Node.js, and modern web technologies",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -20,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`font-mono ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense>
           {children}

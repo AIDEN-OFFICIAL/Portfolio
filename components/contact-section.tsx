@@ -61,15 +61,38 @@ export function ContactSection() {
                   <h3 className="text-xl font-bold text-accent">{"> social --links"}</h3>
 
                   <div className="flex gap-4">
+                <a
+                  href="https://github.com/AIDEN-OFFICIAL/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+
                     <Button variant="outline" size="icon" className="hover:border-primary/50 bg-transparent">
                       <Github className="w-5 h-5" />
-                    </Button>
-                    <Button variant="outline" size="icon" className="hover:border-primary/50 bg-transparent">
-                      <Linkedin className="w-5 h-5" />
-                    </Button>
+                      </Button>
+                </a>
+                    <a
+                      href="https://www.linkedin.com/in/aiden-c-t-827aaa306/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                    >
+                      <Button variant="outline" size="icon" className="hover:border-primary/50 bg-transparent">
+                        <Linkedin className="w-5 h-5" />
+                      </Button>
+                    </a>
+                <a
+                  href="https://leetcode.com/u/mernstack/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                      
                     <Button variant="outline" size="icon" className="hover:border-primary/50 bg-transparent">
                       <ExternalLink className="w-5 h-5" />
                     </Button>
+                </a>
                   </div>
                 </div>
               </Card>

@@ -18,9 +18,7 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
   useEffect(() => {
     if (typeof window === "undefined") return
 
-    console.log("[v0] Starting Unicorn Studio embed with method:", loadingMethod)
-    console.log("[v0] Project ID:", projectId)
-    console.log("[v0] Is Background:", isBackground)
+
 
     if (loadingMethod === "framer") {
       // Try Framer embed approach
@@ -37,7 +35,6 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
     const trySDKEmbed = () => {
       if (!containerRef.current) return
 
-      console.log("[v0] Attempting SDK embed for project:", projectId)
 
       const container = containerRef.current
 
@@ -66,20 +63,16 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
       script.type = "text/javascript"
       script.innerHTML = `
         !function(){
-          console.log("[v0] Initializing UnicornStudio for project: ${projectId}");
           if(!window.UnicornStudio){
             window.UnicornStudio={isInitialized:!1};
             var i=document.createElement("script");
             i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js";
             i.onload=function(){
-              console.log("[v0] UnicornStudio script loaded successfully");
               if(!window.UnicornStudio.isInitialized){
                 try {
                   UnicornStudio.init().then((scenes) => {
-                    console.log("[v0] UnicornStudio initialized with scenes:", scenes);
                     window.UnicornStudio.isInitialized=!0;
                   }).catch((err) => {
-                    console.error("[v0] Error initializing UnicornStudio:", err);
                   });
                 } catch (error) {
                   console.error("[v0] Error calling UnicornStudio.init():", error);
@@ -88,20 +81,15 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
             };
             i.onerror=function(error){
               console.error("[v0] Failed to load UnicornStudio script:", error);
-              console.log("[v0] Falling back to Framer embed");
             };
             (document.head || document.body).appendChild(i);
           } else {
-            console.log("[v0] UnicornStudio already loaded, re-initializing");
             if (window.UnicornStudio.init) {
               try {
                 UnicornStudio.init().then((scenes) => {
-                  console.log("[v0] UnicornStudio re-initialized with scenes:", scenes);
                 }).catch((err) => {
-                  console.error("[v0] Error re-initializing UnicornStudio:", err);
                 });
               } catch (error) {
-                console.error("[v0] Error calling UnicornStudio.init():", error);
               }
             }
           }
@@ -113,7 +101,6 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
       const timeout = isBackground ? 15000 : 10000
       setTimeout(() => {
         if (loadingMethod === "sdk") {
-          console.log("[v0] SDK timeout reached, falling back to Framer embed")
           // setLoadingMethod("framer")
         }
       }, timeout)
@@ -144,11 +131,9 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           onLoad={() => {
-            console.log("[v0] Framer embed loaded successfully")
             setIsLoading(false)
           }}
           onError={() => {
-            console.error("[v0] Framer embed failed to load")
             setLoadingMethod("failed")
           }}
         />

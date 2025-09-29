@@ -3,19 +3,19 @@
 import { useState, useEffect } from "react"
 
 const titles = [
-  "Full-Stack Developer",
+  "Full-Stack JavaScript Developer",
   "React Specialist",
   "Node.js Expert",
+  "MongoDB Developer",
   "TypeScript Enthusiast",
-  "DevOps Engineer",
+  "Problem Solver",
+  "Fast Learner",             // Added based on request and career highlights
+  "CI/CD Enthusiast",         // New/Learning
+  "AWS Cloud Enthusiast",     // New/Learning
+  "Docker Enthusiast",        // New/Learning
   "WebRTC Developer",
   "WebSocket Architect",
-  "CI/CD Specialist",
-  "Docker Expert",
-  "AWS Cloud Engineer",
-  "MongoDB Developer",
-  "Problem Solver",
-]
+];
 
 export function DynamicTitle() {
   const [currentTitle, setCurrentTitle] = useState(0)
