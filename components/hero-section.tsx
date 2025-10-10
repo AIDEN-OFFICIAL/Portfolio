@@ -1,17 +1,50 @@
 "use client"
 
-import { UnicornStudioEmbed } from "./unicorn-studio-embed"
+import { Suspense, useEffect, useState } from "react"
+import React from "react"
+// import { UnicornStudioEmbed } from "./unicorn-studio-embed"
 import { DynamicTitle } from "./dynamic-title"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip"
 import { Github, Linkedin, ExternalLink, FileText, Play } from "lucide-react"
 
+const UnicornStudioEmbed = React.lazy(() =>
+  import("@/components/unicorn-studio-embed")
+)
+
 export function HeroSection() {
+  const [showBackground, setShowBackground] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowBackground(true), 2000)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <section className="min-h-screen relative overflow-hidden w-full">
-      {/* Responsive background */}
+      {/* Responsive background with 2s delay */}
       <div className="absolute inset-0 w-full h-full">
-        <UnicornStudioEmbed projectId="uJULULYaZcc3pznl8ChH" className="w-full h-full object-cover" isBackground={true} />
+        {!showBackground ? (
+          <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-50">
+            <div className="text-center space-y-2">
+              <div className="animate-spin w-12 h-12 border-4 border-primary border-t-transparent rounded-full mx-auto"></div>
+              <p className="text-lg text-muted-foreground font-mono">Loading 3D background...</p>
+            </div>
+          </div>
+        ) : (
+          <Suspense
+            fallback={
+              <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-50">
+                <div className="text-center space-y-2">
+                  <div className="animate-spin w-12 h-12 border-4 border-primary border-t-transparent rounded-full mx-auto"></div>
+                  <p className="text-lg text-muted-foreground font-mono">Loading 3D background...</p>
+                </div>
+              </div>
+            }
+          >
+            <UnicornStudioEmbed projectId="uJULULYaZcc3pznl8ChH" className="w-full h-full object-cover" isBackground={true} />
+          </Suspense>
+        )}
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col w-full">

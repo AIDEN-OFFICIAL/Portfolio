@@ -8,7 +8,7 @@ interface UnicornStudioEmbedProps {
   isBackground?: boolean
 }
 
-export function UnicornStudioEmbed({ projectId, className = "", isBackground = false }: UnicornStudioEmbedProps) {
+function UnicornStudioEmbed({ projectId, className = "", isBackground = false }: UnicornStudioEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const [loadingMethod, setLoadingMethod] = useState<"sdk" | "framer" | "failed">("sdk")
@@ -196,3 +196,5 @@ export function UnicornStudioEmbed({ projectId, className = "", isBackground = f
     </div>
   )
 }
+
+export default UnicornStudioEmbed
