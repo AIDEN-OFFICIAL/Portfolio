@@ -35,12 +35,13 @@ const skillCategories = [
   {
     title: "Tools & Services",
     icon: "🛠️",
-    skills: ["Postman", "Cloudinary", "Razorpay", "MVC Architecture", "API Integration"],
+    skills: ["Jira","Postman", "Cloudinary", "Razorpay", "MVC Architecture", "API Integration"],
   },
 {
   title: "Interpersonal & Teamwork",
   icon: "🤝",
   skills: [
+    "Agile & Scrum Methodologies",
     "Strong Communication",
     "Collaboration & Teamwork",
     "Public Speaking",

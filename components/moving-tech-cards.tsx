@@ -101,6 +101,16 @@ const technologies = [
 		logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
 		color: "#FF6C37",
 	},
+	{
+		name: "Scrum",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1760513794/scrumorg-1_y8zpxm.svg",
+		color: "#F58025",
+	},
+	{
+		name: "Jira",
+		logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Jira_Logo.svg",
+		color: "#A78BFA",
+	},
 ]
 
 function getRandomColor(index: number) {
@@ -131,8 +141,8 @@ function getRandomColor(index: number) {
 }
 
 export function MovingTechCards() {
-	const firstRow = technologies.slice(0, 10)
-	const secondRow = technologies.slice(10, 20)
+	const firstRow = technologies.slice(0, 11)
+	const secondRow = technologies.slice(10, 22)
 
 	return (
 		<section className="py-20 bg-background/50 backdrop-blur-sm border-y border-border/50">
