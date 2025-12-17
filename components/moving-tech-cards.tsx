@@ -21,6 +21,31 @@ const technologies = [
 		logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
 		color: "#339933",
 	},
+		{
+		name: "Super Test",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1765978059/supertest_1_ond0yx.png",
+		color: "#A78BFA",
+	},
+	{
+		name: "Docker compose",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1765977984/Docker_compose_mnwhtn.png",
+		color: "#A78BFA",
+	},
+	{
+		name: "Github actions",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1765977983/Github-Actions_dcirsg.png",
+		color: "#A78BFA",
+	},
+	{
+		name: "Jenkins",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1765977984/Jenkins_hccrui.png",
+		color: "#A78BFA",
+	},
+	{
+		name: "Vitest",
+		logo: "https://logo.svgcdn.com/logos/vitest.png",
+		color: "#A78BFA",
+	},
 	{
 		name: "MongoDB",
 		logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
@@ -40,6 +65,11 @@ const technologies = [
 		name: "Docker",
 		logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
 		color: "#2496ED",
+	},
+		{
+		name: "Jest",
+		logo: "https://static.cdnlogo.com/logos/j/58/jest.svg",
+		color: "#A78BFA",
 	},
 	{
 		name: "Git",
@@ -111,6 +141,17 @@ const technologies = [
 		logo: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Jira_Logo.svg",
 		color: "#A78BFA",
 	},
+	{
+		name: "React Testing Lib",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1765977213/REACT_testing_library_img_fueopk.png",
+		color: "#A78BFA",
+	},
+	{
+		name: "Play Wright",
+		logo: "https://res.cloudinary.com/de6nxii3v/image/upload/v1765977983/Playwright_tz5619.png",
+		color: "#A78BFA",
+	},
+
 ]
 
 function getRandomColor(index: number) {
@@ -141,8 +182,8 @@ function getRandomColor(index: number) {
 }
 
 export function MovingTechCards() {
-	const firstRow = technologies.slice(0, 11)
-	const secondRow = technologies.slice(10, 22)
+	const firstRow = technologies.slice(0, 18)
+	const secondRow = technologies.slice(14, 33)
 
 	return (
 		<section className="py-20 bg-background/50 backdrop-blur-sm border-y border-border/50">

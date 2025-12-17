@@ -26,7 +26,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground font-mono">{'> echo "Built with ❤️ by Aiden C T"'}</p>
-            <p className="text-sm text-muted-foreground font-mono">© 2025 - Present. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground font-mono">© 2024 - Present. All rights reserved.</p>
           </div>
         </div>
       </footer>

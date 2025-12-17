@@ -33,6 +33,42 @@ const skillCategories = [
     skills: ["WebRTC", "WebSocket", "Socket.io", "Real-time APIs"],
   },
   {
+    title: "Quality Assurance & Testing",
+    icon: "🧪",
+    skills: [
+      "Unit & Integration Testing (Jest, Vitest)",
+      "E2E Testing (Playwright)",
+      "React Testing Library",
+      "API Testing (Supertest)",
+      "Manual & Automation Testing",
+      "STLC & Bug Life Cycle",
+      "Verification & Validation"
+    ],
+  },
+  {
+    title: "Advanced DevOps & Automation",
+    icon: "🚀",
+    skills: [
+      "Docker (Containerization, Compose)",
+      "Docker Volumes & Networking",
+      "CI/CD Pipelines (GitHub Actions, Jenkins)",
+      "Infrastructure (VM, VPC)",
+      "Linux Command Line",
+      "Cloud Deployment (AWS)"
+    ],
+  },
+  {
+    title: "Software Engineering Methodologies",
+    icon: "📋",
+    skills: [
+      "SDLC (Waterfall, Agile, Scrum)",
+      "Project Management (Jira)",
+      "Functional & Black/White/Gray Box Testing",
+      "Defect Management & Bug Tracking",
+      "Requirements Analysis"
+    ],
+  },
+  {
     title: "Tools & Services",
     icon: "🛠️",
     skills: ["Jira","Postman", "Cloudinary", "Razorpay", "MVC Architecture", "API Integration"],
@@ -56,7 +92,8 @@ const skillCategories = [
     "Continuous Learning",
     "Adaptability"
   ],
-}
+  },
+
 ]
 
 export function SkillsSection() {
@@ -103,8 +140,7 @@ export function SkillsSection() {
             <div className="text-center space-y-4">
               <h3 className="text-2xl font-bold text-primary">{"> status --current"}</h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Ready for an immediate professional challenge, I am actively mastering DevOps (Docker, CI/CD, AWS) and real-time architecture (WebRTC) toward a DevOps Manager role, applying this knowledge directly to my capstone project, DevDirect,
-                which connects aspiring developers with industry interview practice.
+                Actively transitioning into Technical Consulting. Currently mastering the integration of CI/CD pipelines, containerization, and automated testing suites into the SDLC to ensure zero-defect delivery for complex enterprise systems.
               </p>
             </div>
           </Card>
